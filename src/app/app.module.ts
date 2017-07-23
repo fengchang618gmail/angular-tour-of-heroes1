@@ -19,7 +19,12 @@ import { HeroService } from './hero.service'
   imports: [
     BrowserModule,
     FormsModule, // <-- import FormModule before binding with [(ngModel)]
-    RouterModule
+    RouterModule.forRoot([
+    	{
+    		path: 'heroes',
+    		component: HeroesComponent
+    	}
+    ])
   ],
   providers: [HeroService],
   bootstrap: [AppComponent]
