@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // <-- ngModle lives here
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
@@ -17,7 +18,8 @@ import { HeroService } from './hero.service'
   ],
   imports: [
     BrowserModule,
-    FormsModule // <-- import FormModule before binding with [(ngModel)]
+    FormsModule, // <-- import FormModule before binding with [(ngModel)]
+    RouterModule
   ],
   providers: [HeroService],
   bootstrap: [AppComponent]
